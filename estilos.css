@@ -1,3 +1,9 @@
+:root {
+    --bg-producto: #ffffff;
+    --bg-carrito: #e8e8e8;
+    --borde-stock-bajo: #e74c3c;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -37,12 +43,19 @@ header {
 
 .producto {
     flex: 1 1 180px;
-    background: white;
-    background-color: var(--bg --producto);
+    background-color: var(--bg-producto);
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.producto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .stock-bajo {
@@ -55,8 +68,7 @@ header {
 
 .carrito {
     flex: 1;
-    background: #e8e8e8;
-    background-color: var(--bg --carrito);
+    background-color: var(--bg-carrito);
     border-radius: 8px;
     padding: 12px;
     min-height: 200px;
